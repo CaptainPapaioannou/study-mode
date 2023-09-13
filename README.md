@@ -18,7 +18,7 @@ Study Mode is a Chrome extension designed to enhance your focus and productivity
 
 ## Installation
 
-1. **Download the Extension**: Extension isn't available on Google Chrome store yet
+1. **Download the Extension**: Extension isn't available on Google Chrome store yet, you need to download the files and manual load the extension from the extensions managment tab on your google chrome browser. Once you download it enable/disable it via the toogle bar.
 
 2. **Enable Permissions**: Ensure that the extension has the necessary permissions to block websites and access your browsing history for accurate distraction prevention.
 
@@ -60,6 +60,22 @@ content.js : Contains the javascript code for the features that happen automatic
 popout.html : The html for interface of the popout menu.
 
 popout.js : It contains the javascript for all the features that are being controlled via the popup menu. Specifically is divided in three parts. The Quote backend code, the Music backend code and the To-do List backend code.
+
+## Limitations
+- Currently only avialable for manifest V2
+- Music tracks are not directly available due to copyright considerations. You can link any mp3 file you like. Just name it this way:
+  ```
+  *name*-track.mp3
+  ```
+  then, all you need to do is to apply the names that you gave to the -track.mp3 files to the corresponding values in the popout.html file. Make sure that the mp3 files are stored ate the same folder as the rest of the extension files, otherwise you need to modify the path at content.js
+- Once you pause the track, it then restarts. You can only stop and play the tracks from the beggining at the momment
+
+## Future enhancements
+- Proper API for music tracks to avoid size limitations
+- Proper API for quotes to expand variety 
+- Extend the control of music tracks. Control the track and set a cursor to the point of the song that you desire
+- Blockage of youtube with machine learning implementation that trains a model to only block distracting and entertainment videos and allow education videos and tutorials
+
 
 ## Acknowledgments
 
