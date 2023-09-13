@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Popout Page</title>
+    <style>
+      body{
+        width:400px;
+        background: #717896;
+        color: #f7fafc;
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 900;
+      }
+      /* Style the select container */
+      .custom-select {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+
+      /* Style the select itself */
+      .custom-select select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #f7fafc;
+        background-color: #edf2f7;
+        appearance: none;
+        font-family: 'Playfair Display', Georgia, serif;
+        cursor: pointer;
+      }
+
+      /* Style the select arrow */
+      .custom-select select::after {
+        content: "\25BC"; /* Unicode character for down arrow */
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      /* Style the options */
+      .custom-select select option {
+        padding: 10px;
+        background-color: #edf2f7;
+        color: #333;
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+
+      /* Style the select when it's focused */
+      .custom-select select:focus {
+        outline: none;
+        box-shadow: none;
+        border: 1px solid #ccc; /* You can adjust the border style if needed */
+      }
+
+      /* Style the select options */
+      .custom-select select option {
+        padding: 10px;
+        background-color: #edf2f7;
+        font-family: 'Playfair Display', Georgia, serif; /* Set the desired font-family */
+        color: #333;
+      }
+
+      /* Style the selected option when hovering */
+      .custom-select select option:hover {
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      /* Style the selected option */
+      .custom-select select option:checked {
+        background-color: #007bff; /* Change to your preferred color */
+        color: #edf2f7;
+      }
+
+      .play {
+        background-color: #4CAF50;; /* Background color for the Play button */
+        color: #fff; /* Text color for the Play button */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Playfair Display', Georgia, serif; /* Set the desired font-family */
+        font-weight: bold;
+      }
+
+      /* Style the Play button on hover */
+      .play:hover {
+        background-color: #45a049; /* Change to a darker shade for hover effect */
+      }
+
+      /* Style the Pause button */
+      .pause {
+        background-color: #E74C3C; /* Background color for the Pause button */
+        color: #fff; /* Text color for the Pause button */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Playfair Display', Georgia, serif; /* Set the desired font-family */
+        font-weight: bold;
+      }
+
+      /* Style the Pause button on hover */
+      .pause:hover {
+        background-color: #C0392B; /* Change to a darker shade for hover effect */
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        }
+
+        li {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        }
+
+        li:hover{
+        background: rgba(0, 0, 0, 0.25);
+        }
+
+        li input[type="checkbox"] {
+        margin-right: 5px;
+        }
+
+        li.completed span {
+        text-decoration: line-through;
+        }
+
+        li button.delete-button{
+        position: absolute;
+        right: 0;
+        margin-right: auto;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <h3 class="quote-placeholder">Random Quote</h3>
+    <hr>
+    <h2>To-Do List 📝</h2>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addTask" style="font-family: 'Playfair Display', Georgia, serif";>Add➕</button>
+    <ul id="taskList"></ul>
+    <hr>
+    <h1>Music 🎵</h1>
+    <div class="custom-select">
+    <select>
+      <option value="concentration">Concentration 🧠</option>
+      <option value="lofi">Lofi 😎</option>
+      <option value="focus">Focus 👩‍💻</option>
+      <option value="extreme">Extreme ⚡</option>
+      <option value="loungehouse">Lounge House 🎺</option>
+      <option value="jazzhop">Jazzhop 🎷</option>
+      <option value="minecraft">Minecraft ⛏🧱</option>
+      <option value="skyrim">Skyrim 🐉⚔️</option>
+      <option value="nintendo">Nintendo 🕹️🍄</option>
+      <option value="spiderman">Spiderman 🕸️</option>
+    </select>
+    </div>
+    <button class="play">Play ▷</button>
+    <button class="pause">Pause</button>
+    <script src="popout.js"></script>
+  </body>
+</html>

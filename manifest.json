@@ -1,0 +1,33 @@
+{
+  "name": "Study Mode",
+  "version": "4.07",
+  "description": "Helps you study/work providing a task list, background music and blocking distractions",
+	"browser_action": {
+		"default_title": "Study Mode",
+		"default_popup": "popout.html"
+	},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background":{
+    "page": "background.html",
+    "persistent": true
+  },
+  "manifest_version": 2,
+
+  "permissions": [
+    "https://www.facebook.com/*",
+    "https://www.netflix.com/*",
+    "https://www.spotify.com/*",
+    "https://www.instagram.com/*",
+    "https://www.roblox.com/*",
+    "https://www.discord.com/*"
+  ],
+  "icons": {
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
