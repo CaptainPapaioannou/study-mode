@@ -18,7 +18,7 @@ Study Mode is a Chrome extension designed to enhance your focus and productivity
 
 ## Installation
 
-1. **Download the Extension**: Extension isn't available on Google Chrome store yet, you need to download the files and manual load the extension from the extensions managment tab on your google chrome browser. Once you download it enable/disable it via the toogle bar.
+1. **Download the Extension**: Extension isn't available on Google Chrome store yet, you need to download the files and manualy load the extension from the extensions managment tab on your google chrome browser. Once you download it enable/disable it via the toogle bar.
 
 2. **Enable Permissions**: Ensure that the extension has the necessary permissions to block websites and access your browsing history for accurate distraction prevention.
 
